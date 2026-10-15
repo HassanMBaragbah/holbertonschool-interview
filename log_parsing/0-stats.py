@@ -1,4 +1,4 @@
-#!/usr/init/env python3
+#!/usr/bin/env python3
 """
 A script that reads stdin line by line and computes metrics:
 - Total file size
