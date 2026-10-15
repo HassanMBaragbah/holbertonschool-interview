@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+A script that reads stdin line by line and computes metrics:
+- Total file size
+- Number of lines by status code
+"""
+
 import sys
 
 def print_statistics(total_file_size, status_counts):
@@ -47,6 +53,5 @@ if __name__ == "__main__":
         print_statistics(total_file_size, status_counts)
         raise
     
-    # Print final stats if loop ends naturally and lines weren't a multiple of 10
     if line_count % 10 != 0:
         print_statistics(total_file_size, status_counts)
