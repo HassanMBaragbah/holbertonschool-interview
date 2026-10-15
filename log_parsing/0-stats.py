@@ -33,6 +33,7 @@ if __name__ == "__main__":
 
     try:
         for line in sys.stdin:
+            line_count += 1
             parts = line.split()
             if len(parts) >= 2:
                 try:
@@ -46,8 +47,6 @@ if __name__ == "__main__":
                 except (ValueError, IndexError):
                     pass
 
-            line_count += 1
-
             if line_count % 10 == 0:
                 print_statistics(total_file_size, status_counts)
 
@@ -55,5 +54,4 @@ if __name__ == "__main__":
         print_statistics(total_file_size, status_counts)
         raise
 
-    if line_count % 10 != 0:
-        print_statistics(total_file_size, status_counts)
+    print_statistics(total_file_size, status_counts)
